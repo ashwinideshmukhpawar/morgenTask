@@ -29,7 +29,7 @@ let acctData = [
    };
 
    function getAccountNumbers(user, sortBy, sortDirection){
-       let accountnumbers = acctData
+       let accountnumbers = [...acctData];
        let accountNumberList = [];
        if(accountnumbers.length>0){
             for(let i=0;i<accountnumbers.length;i++)
@@ -66,8 +66,7 @@ let acctData = [
         }
         
         if(accountnumbers.length > 0 ){
-            console.log(accountnumbers);
-            console.log(acctData);          
+            console.log(accountnumbers);         
         }else{
             console.log(" Account Number is not available");
         }

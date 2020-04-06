@@ -7,21 +7,21 @@ article{
 .account-details{
     border: 2px solid blue;
     border-collapse: collapse;
-    width:60%;
+    width:70%;
 }
 .account-details thead tr th{ 
-    border-bottom: 1px solid grey; 
+    border-bottom: 1px solid #aaa; 
     padding: 3px;
 }
 .acccount-head{
-    background-color: #d8d1d1;
+    background-color: #eee;
     text-align: left;
 }
 .cash-head{
     text-align: right;
 }
 .highlight{
-  background-color: #cac5c5;
+  background-color: #ddd;
 }
 .up-arrow{
         width: 0; 
@@ -41,12 +41,12 @@ article{
     font-size: 15px;
     padding:5px;
     font-weight: bold;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
 }
 .acccount-balance{
     text-align: right;
     padding:5px;
-    border-bottom: 1px solid #ccc
+    border-bottom: 1px solid #ddd
 }
 .cash-available{
 font-size: 14px;
@@ -66,4 +66,3 @@ font-size: 14px;
     color: blue;
 }
 
-/*overflow-x: auto;*/
