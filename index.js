@@ -29,7 +29,7 @@ let acctData = [
    };
 
    function getAccountNumbers(user, sortBy, sortDirection){
-       let accountnumbers = acctData.slice();
+       let accountnumbers = acctData
        let accountNumberList = [];
        if(accountnumbers.length>0){
             for(let i=0;i<accountnumbers.length;i++)
@@ -67,17 +67,23 @@ let acctData = [
         
         if(accountnumbers.length > 0 ){
             console.log(accountnumbers);
+            console.log(acctData);          
         }else{
             console.log(" Account Number is not available");
         }
-        let selectcecdAccocuntDetails = accountnumbers;
-       /* let selectcecdAccocunt = accountNumberList;
-        if(selectcecdAccocunt.length > 0)
-        {
-            console.log("Accoucnt Numbers:" + selectcecdAccocunt);
-        }else{
-            console.log(user + " Account user is not available");
-        }*/
+        
+        
+        //if user want to display only array Of account number then uncomment below code
+        /*let selectcecdAccocuntDetails = [];
+        accountnumbers.forEach(element => {
+          selectcecdAccocuntDetails.push(element.acctNum);          
+        });
+        if(selectcecdAccocuntDetails.length > 0 ){
+            console.log(selectcecdAccocuntDetails);
+          }else{
+            console.log(" Account Number is not available");
+          }
+        return selectcecdAccocuntDetails;*/
        
         return accountnumbers;
    }
