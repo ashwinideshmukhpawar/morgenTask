@@ -81,8 +81,6 @@ let acctData = [
    getAccountNumbers("Bob");
    getAccountNumbers("Charlie");
    getAccountNumbers('', "acctNum");
-   var datap = getAccountNumbers("Alice", 'balance', "desc");
-   datap.forEach(element => {
-    console.log("return data :" + element.acctNum)
-   });
+   getAccountNumbers("Alice", 'balance');
+   
    
