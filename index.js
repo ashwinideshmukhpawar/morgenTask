@@ -37,7 +37,7 @@ let acctData = [
                 accountnumbers[i]['balance']= balance[accountnumbers[i].acctNum];  
             }
         }
-        if(user){
+        if(user){ //fliter the account number as per User name
             accountnumbers = accountnumbers.filter((userDetail) => {
                 if(userDetail.user == user){
                     return true;
@@ -45,10 +45,13 @@ let acctData = [
                 
             });           
         }
-        if(sortBy){
+
+        //Sort the account number as per Account Number or Balance
+        if(sortBy){ 
             accountnumbers = accountnumbers.sort((a,b) =>{
                 let firstValue = a[sortBy];
                 let secondValue=b[sortBy];
+                // By default sorting in ascending order
                 if(firstValue > secondValue){
                     return 1;
                 }else if(firstValue == secondValue){
@@ -65,7 +68,7 @@ let acctData = [
         if(accountnumbers.length > 0 ){
             console.log(accountnumbers);
         }else{
-            console.log("Enterd Account user is not available");
+            console.log(" Account Number is not available");
         }
         let selectcecdAccocuntDetails = accountnumbers;
        /* let selectcecdAccocunt = accountNumberList;
@@ -78,9 +81,13 @@ let acctData = [
        
         return accountnumbers;
    }
+   console.log(" -------- filtered by Bob--------");
    getAccountNumbers("Bob");
+  console.log(" -------- filtered by Charlie--------");
    getAccountNumbers("Charlie");
+   console.log(" -------- Sort by acctNum--------");
    getAccountNumbers('', "acctNum");
+   console.log(" -------- filtered by Alice; sorted by balance Acending order--------");
    getAccountNumbers("Alice", 'balance');
    
    
