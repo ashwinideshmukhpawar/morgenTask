@@ -47,7 +47,7 @@ let acctData = [
         }
 
         //Sort the account number as per Account Number or Balance
-        if(sortBy){ 
+        if(sortBy == "acctNum" || sortBy == "balance"){ 
             accountnumbers = accountnumbers.sort((a,b) =>{
                 let firstValue = a[sortBy];
                 let secondValue=b[sortBy];
@@ -65,26 +65,15 @@ let acctData = [
             }
         }
         
-        if(accountnumbers.length > 0 ){
-            console.log(accountnumbers);         
-        }else{
-            console.log(" Account Number is not available");
-        }
-        
-        
-        //if user want to display only array Of account number then uncomment below code
-        /*let selectcecdAccocuntDetails = [];
+        let selectcecdAccocuntDetails = [];
         accountnumbers.forEach(element => {
           selectcecdAccocuntDetails.push(element.acctNum);          
         });
-        if(selectcecdAccocuntDetails.length > 0 ){
-            console.log(selectcecdAccocuntDetails);
-          }else{
-            console.log(" Account Number is not available");
-          }
-        return selectcecdAccocuntDetails;*/
+         console.log(selectcecdAccocuntDetails);
        
-        return accountnumbers;
+        return selectcecdAccocuntDetails;
+       
+        
    }
    console.log(" -------- filtered by Bob--------");
    getAccountNumbers("Bob");
