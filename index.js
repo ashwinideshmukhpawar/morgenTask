@@ -65,13 +65,13 @@ let acctData = [
             }
         }
         
-        let selectcecdAccocuntDetails = [];
+        
         accountnumbers.forEach(element => {
-          selectcecdAccocuntDetails.push(element.acctNum);          
+          accountNumberList.push(element.acctNum);          
         });
-         console.log(selectcecdAccocuntDetails);
+         console.log(accountNumberList);
        
-        return selectcecdAccocuntDetails;
+        return accountNumberList;
        
         
    }
